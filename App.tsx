@@ -52,8 +52,23 @@ export default function App() {
     AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(recent)).catch(() => {});
   }, [recent, loaded]);
 
-  const bill = parseFloat(billText) || 0;
-  const customTipPct = customTip.trim() ? parseFloat(customTip) : NaN;
+  // Accept comma OR dot as decimal separator (locale tolerance), clamp
+  // negative inputs to 0, and cap the bill to keep arithmetic finite.
+  const MAX_BILL = 1e9;
+  const parseAmount = (s: string): number => {
+    const cleaned = s.replace(',', '.');
+    const n = parseFloat(cleaned);
+    if (!Number.isFinite(n)) return 0;
+    return Math.max(0, Math.min(MAX_BILL, n));
+  };
+  const parseTip = (s: string): number => {
+    const cleaned = s.replace(',', '.');
+    const n = parseFloat(cleaned);
+    if (!Number.isFinite(n)) return NaN;
+    return Math.max(0, n);
+  };
+  const bill = parseAmount(billText);
+  const customTipPct = customTip.trim() ? parseTip(customTip) : NaN;
   const effectiveTipPct = Number.isFinite(customTipPct) ? customTipPct : tipPct;
   const people = Math.max(1, parseInt(peopleText, 10) || 1);
 
@@ -79,6 +94,8 @@ export default function App() {
 
   const saveSnapshot = useCallback(() => {
     if (bill <= 0) return;
+    // Belt-and-suspenders: refuse to persist non-finite math.
+    if (!Number.isFinite(total) || !Number.isFinite(perPerson)) return;
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success).catch(() => {});
     const snap: Snapshot = {
       id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -123,7 +140,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="dark" />
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}
       >
         <ScrollView
