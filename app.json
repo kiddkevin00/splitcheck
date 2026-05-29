@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Split Check",
+    "slug": "splitcheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.markutilitylabs.splitcheck",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.markutilitylabs.splitcheck",
+      "versionCode": 1
+    }
+  }
+}
