@@ -1,105 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Split Check — Support</title>
-  <meta name="description" content="Support and FAQ for Split Check." />
-  <meta name="theme-color" content="#f7f4ec" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Split Check — Type the bill. See the split.</title>
+<meta name="description" content="A tip calculator and bill splitter for iPhone. Tap, type, done — no signup, no banners, no tip-shaming." />
+<meta name="theme-color" content="#e9f4e5" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="app.css" />
 </head>
 <body>
 <div class="page">
+  <header class="topnav">
+  <a class="brand" href="./" aria-label="Split Check home">
+    <span class="mark">SC</span>
+    Split Check
+    <span class="version">v1.0.0</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary"><a href="#features" aria-current="page">Features</a><a href="#howtoplay">How to play</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/kiddkevin00/splitcheck" rel="noopener" target="_blank">GitHub</a></nav>
+</header>
 
-  <header class="masthead">
-    <a class="wordmark" href="./" aria-label="Split Check home">
-      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-      Split <em>Check</em>
-    </a>
-    <nav class="topnav" aria-label="Primary">
-      <a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/kiddkevin00/splitcheck">GitHub</a>
-    </nav>
-  </header>
-
-  <section class="mast" aria-labelledby="mast-title">
-    <p class="eyebrow">Support<span class="dot"></span>The manual</p>
-    <h1 class="display" id="mast-title">
-      Split<br>
-      <em>Check<span class="punct">.</span></em>
-    </h1>
-    <div class="mast-rule" aria-hidden="true"></div>
-    <p class="lede">A tip calculator and bill splitter for iPhone. Tap, type, done — <em>no ads, no signup, no banners chasing your wallet.</em></p>
-    <p class="meta">v1.0.0<span class="sep">·</span>iPhone · iOS 16+</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-eyebrow"><span class="beta-badge">Now in beta · iOS via Expo Go</span></p>
+    <h1 id="hero-title">Type the bill. See the split.</h1>
+    <p class="lede">A tip calculator and bill splitter for iPhone. Tap, type, done — no signup, no banners, no tip-shaming.</p>
+    <div class="cta-row">
+      <a class="cta-primary" href="https://github.com/kiddkevin00/splitcheck" rel="noopener" target="_blank">★ Star on GitHub</a>
+      <a class="cta-secondary" href="#howtoplay">How it works →</a>
+    </div>
+    <p class="trust-row"><span>Offline</span><span>No ads</span><span>No accounts</span><span>Open source</span></p>
   </section>
 
-  <main>
+  <section id="features" aria-labelledby="features-h">
+    <p class="eyebrow">Features</p>
+    <h2 id="features-h">What's in the build</h2>
+    <p class="subhead">The whole feature set, plainly listed — no upsells gating the basics.</p>
+    <div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon">$</span><h3>Large amount entry</h3><p>Big focused bill input with auto-decimal-pad. Comma or dot both work as the decimal separator.</p></article>
+      <article class="feature-card"><span class="feature-icon">%</span><h3>Tip presets + custom</h3><p>10 · 15 · 18 · 20 · 25 — the common US restaurant brackets. Type in a custom percent for anywhere else.</p></article>
+      <article class="feature-card"><span class="feature-icon">⊞</span><h3>Party-size stepper</h3><p>Tap − / + to change how many ways the bill splits. The per-person amount updates live in big type.</p></article>
+      <article class="feature-card"><span class="feature-icon">⤓</span><h3>Copy summary</h3><p>Drops the bill / tip / per-person breakdown on your clipboard for a quick paste into your group chat.</p></article>
+      <article class="feature-card"><span class="feature-icon">◧</span><h3>Recent splits</h3><p>Save a calculation to the Recent list. Tap any past split to restore those values.</p></article>
+      <article class="feature-card"><span class="feature-icon">⊘</span><h3>Nothing tracked</h3><p>No analytics, no signup, no network requests. Everything is local arithmetic.</p></article>
+    </div>
+  </section>
 
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">01</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Overview</p>
-        <h2>How it works</h2>
-        <p>Type the bill amount. Tap a tip percent (or a custom one). Use the <span class="kbd">+</span> / <span class="kbd">−</span> stepper to set how many people are splitting. Each person's share appears below in large type.</p><ul><li><strong>Copy summary</strong> puts the breakdown on your clipboard for sharing.</li><li><strong>Save</strong> stores the calculation in Recent so you can recall the last ten splits.</li><li>Tap any Recent row to restore those values.</li></ul>
-      </section>
-    </article>
+  <section id="howtoplay" aria-labelledby="howto-h">
+    <p class="eyebrow">How to play</p>
+    <h2 id="howto-h">From cold-start to good-at-it</h2>
+    <p class="subhead">A few short steps. The app gets out of your way after that.</p>
+    <div class="steps-grid">
+      <article class="step-card"><span class="step-num">01</span><h3>Type the bill</h3><p>Open the app, type the amount in the big input. Decimal pad opens automatically.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Pick a tip</h3><p>Tap a preset percent or type a custom one. The total updates as you change it.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Set people</h3><p>Use the − / + stepper to set how many ways the bill splits. Each pays appears below.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Share or save</h3><p>Tap Copy summary to paste the breakdown into a message, or Save to keep it in Recent.</p></article>
+    </div>
+  </section>
 
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">02</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Tip presets</p>
-        <h2>Why those preset percentages?</h2>
-        <p>10, 15, 18, 20, 25 — the common US restaurant tipping bracket. If you're in a different region or want something else, type it in the Custom field; the preset chips become inactive.</p>
-      </section>
-    </article>
-
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">03</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Currency</p>
-        <h2>What currency?</h2>
-        <p>The summary uses US dollar formatting via the system locale formatter. A future version may detect device locale automatically — for now amounts are formatted as USD, but the math is currency-agnostic so it works for any currency you read the symbol as.</p>
-      </section>
-    </article>
-
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">04</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Data</p>
-        <h2>What gets saved?</h2>
-        <p>Only the last ten splits you explicitly tap <strong>Save</strong> on. Everything is stored on-device. No analytics, no cloud, no account.</p>
-      </section>
-    </article>
-
-  </main>
-
-  <aside class="contact-card">
-    <p class="eyebrow">Card<span class="dot"></span>No. 01</p>
-    <h3>Need help, or want to <em>report a bug</em>?</h3>
-    <p>Open an issue on GitHub. There's no support email — issues are the canonical channel and they're public, which keeps everything honest.</p>
-    <p class="link-row"><a href="https://github.com/kiddkevin00/splitcheck/issues">github.com/kiddkevin00/splitcheck/issues</a></p>
-  </aside>
+  <section id="screenshots" aria-labelledby="shots-h">
+    <p class="eyebrow">Screenshots</p>
+    <h2 id="shots-h">What it looks like on a phone</h2>
+    <p class="subhead">Captured from the running app at iPhone 14 viewport.</p>
+    <div class="shots-empty">Screenshots from the running app are coming soon.</div>
+  </section>
 
   <footer class="colophon">
-    <div class="colophon-left">
-      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-      Split <em>Check</em> · Mark Utility Labs
-    </div>
-    <nav class="colophon-meta" aria-label="Footer">
-      <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/kiddkevin00/splitcheck">Source</a>
-      <a href="https://github.com/kiddkevin00/splitcheck/issues">Issues</a>
-    </nav>
-  </footer>
-
+  <span class="credit">© Mark Utility Labs · Made with care.</span>
+  <nav class="colophon-links" aria-label="Footer">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/kiddkevin00/splitcheck" rel="noopener" target="_blank">GitHub</a>
+  </nav>
+</footer>
 </div>
 </body>
 </html>
