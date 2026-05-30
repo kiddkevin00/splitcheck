@@ -6,7 +6,7 @@
 <title>Split Check — Support</title>
 <meta name="description" content="Support and FAQ for Split Check." />
 <meta name="theme-color" content="#e9f4e5" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
   </section>
 
   <section style="padding-top:0">
-    <div class="faq"><details><summary>Does it handle other currencies?</summary><p>The math is currency-agnostic, but the summary uses USD formatting via the system locale. Locale detection is on the roadmap.</p></details><details><summary>Why doesn't it suggest a tip percent?</summary><p>Because tipping norms vary wildly. Pick what you actually want. 18% is the default to nudge toward generous in the US bracket, nothing more.</p></details><details><summary>Does it tax-split too?</summary><p>Not yet — for split-by-item bills (where some people had drinks and others didn't) you'll want a different tool. Item-level split is on the roadmap.</p></details><details><summary>Is anything stored?</summary><p>Only the splits you explicitly tap Save on (up to 10). Everything else lives in memory until you close the app.</p></details></div>
+    <div class="faq"><details><summary>Why don't I see negative amounts?</summary><p>Negative inputs are clamped to 0. A negative bill or negative tip would produce nonsense numbers; the app refuses them silently rather than displaying broken math.</p></details><details><summary>Does the app support other currencies?</summary><p>The display uses US dollar formatting ($) right now. The underlying math is currency-agnostic; a future version will detect device locale and switch the symbol automatically.</p></details><details><summary>How long are saved splits kept?</summary><p>Only the last 10 splits you explicitly tap Save on. Newer saves push the oldest off. Tap × on any row to delete a single split.</p></details><details><summary>Is anything sent anywhere?</summary><p>No. Bills, splits, and history all live on this device only, in AsyncStorage. No analytics, no third-party SDKs.</p></details><details><summary>What does Copy put on the clipboard?</summary><p>A short summary like 'Bill $47.50 · 20.0% tip ($9.50) · 4 people · Total $57.00 · Each $14.25' — paste it into any chat app.</p></details></div>
   </section>
 
   <aside class="contact-card">

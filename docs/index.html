@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Split Check — Type the bill. See the split.</title>
-<meta name="description" content="A tip calculator and bill splitter for iPhone. Tap, type, done — no signup, no banners, no tip-shaming." />
+<title>Split Check — Tip. Split. Done.</title>
+<meta name="description" content="A tip calculator and bill splitter for iPhone. Type the bill, tap a tip, set the party size, see what each person owes. No ads, no signup, no banners." />
 <meta name="theme-color" content="#e9f4e5" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -22,13 +22,13 @@
 
   <section class="hero" aria-labelledby="hero-title">
     <p class="hero-eyebrow"><span class="beta-badge">Now in beta · iOS via Expo Go</span></p>
-    <h1 id="hero-title">Type the bill. See the split.</h1>
-    <p class="lede">A tip calculator and bill splitter for iPhone. Tap, type, done — no signup, no banners, no tip-shaming.</p>
+    <h1 id="hero-title">Tip. Split. Done.</h1>
+    <p class="lede">A tip calculator and bill splitter for iPhone. Type the bill, tap a tip, set the party size, see what each person owes. No ads, no signup, no banners.</p>
     <div class="cta-row">
       <a class="cta-primary" href="https://github.com/kiddkevin00/splitcheck" rel="noopener" target="_blank">★ Star on GitHub</a>
       <a class="cta-secondary" href="#howtoplay">How it works →</a>
     </div>
-    <p class="trust-row"><span>Offline</span><span>No ads</span><span>No accounts</span><span>Open source</span></p>
+    <p class="trust-row"><span>Offline-first</span><span>No ads</span><span>No accounts</span><span>Open source</span></p>
   </section>
 
   <section id="features" aria-labelledby="features-h">
@@ -36,12 +36,12 @@
     <h2 id="features-h">What's in the build</h2>
     <p class="subhead">The whole feature set, plainly listed — no upsells gating the basics.</p>
     <div class="feature-grid">
-      <article class="feature-card"><span class="feature-icon">$</span><h3>Large amount entry</h3><p>Big focused bill input with auto-decimal-pad. Comma or dot both work as the decimal separator.</p></article>
-      <article class="feature-card"><span class="feature-icon">%</span><h3>Tip presets + custom</h3><p>10 · 15 · 18 · 20 · 25 — the common US restaurant brackets. Type in a custom percent for anywhere else.</p></article>
-      <article class="feature-card"><span class="feature-icon">⊞</span><h3>Party-size stepper</h3><p>Tap − / + to change how many ways the bill splits. The per-person amount updates live in big type.</p></article>
-      <article class="feature-card"><span class="feature-icon">⤓</span><h3>Copy summary</h3><p>Drops the bill / tip / per-person breakdown on your clipboard for a quick paste into your group chat.</p></article>
-      <article class="feature-card"><span class="feature-icon">◧</span><h3>Recent splits</h3><p>Save a calculation to the Recent list. Tap any past split to restore those values.</p></article>
-      <article class="feature-card"><span class="feature-icon">⊘</span><h3>Nothing tracked</h3><p>No analytics, no signup, no network requests. Everything is local arithmetic.</p></article>
+      <article class="feature-card"><span class="feature-icon">$</span><h3>Big-thumb input</h3><p>Bill amount lives in a single oversized field at the top. Decimal-pad keyboard, dot or comma accepted (locale-tolerant).</p></article>
+      <article class="feature-card"><span class="feature-icon">%</span><h3>Preset chips + custom</h3><p>10 / 15 / 18 / 20 / 25 percent presets in one tap. Tap Custom to type any percentage. Negative values clamp to 0.</p></article>
+      <article class="feature-card"><span class="feature-icon">▣</span><h3>Party stepper</h3><p>Plus / minus stepper for the number of people, plus a direct entry field for big tables. Minimum 1.</p></article>
+      <article class="feature-card"><span class="feature-icon">✶</span><h3>Per-person breakdown</h3><p>Total, tip amount, and per-person share, all shown together. The per-person amount is the headline.</p></article>
+      <article class="feature-card"><span class="feature-icon">⤓</span><h3>Copy summary</h3><p>Tap Copy to put a clean text summary on your clipboard — perfect for posting in a group chat at the end of dinner.</p></article>
+      <article class="feature-card"><span class="feature-icon">⌂</span><h3>Recent splits</h3><p>The last 10 splits you tap Save on are remembered. Tap any recent row to restore those values; tap × to delete.</p></article>
     </div>
   </section>
 
@@ -50,10 +50,11 @@
     <h2 id="howto-h">From cold-start to good-at-it</h2>
     <p class="subhead">A few short steps. The app gets out of your way after that.</p>
     <div class="steps-grid">
-      <article class="step-card"><span class="step-num">01</span><h3>Type the bill</h3><p>Open the app, type the amount in the big input. Decimal pad opens automatically.</p></article>
-      <article class="step-card"><span class="step-num">02</span><h3>Pick a tip</h3><p>Tap a preset percent or type a custom one. The total updates as you change it.</p></article>
-      <article class="step-card"><span class="step-num">03</span><h3>Set people</h3><p>Use the − / + stepper to set how many ways the bill splits. Each pays appears below.</p></article>
-      <article class="step-card"><span class="step-num">04</span><h3>Share or save</h3><p>Tap Copy summary to paste the breakdown into a message, or Save to keep it in Recent.</p></article>
+      <article class="step-card"><span class="step-num">01</span><h3>Type the bill</h3><p>Big number field at the top. Decimal-pad input — '47.50' or '47,50' both work.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Pick a tip</h3><p>Tap one of the preset chips, or type a custom percent. Tapping a preset clears the custom input.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Set the party size</h3><p>Use the +/- stepper or tap the number to type a value. Minimum is 1.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Read the result</h3><p>Per-person amount is the big number in the middle. Tip and total are listed above it; per-person tip and per-person bill are below.</p></article>
+      <article class="step-card"><span class="step-num">05</span><h3>Save or copy</h3><p>Tap Save to store the split in Recent (last 10 kept). Tap Copy to put a clean text summary on your clipboard.</p></article>
     </div>
   </section>
 
@@ -61,7 +62,7 @@
     <p class="eyebrow">Screenshots</p>
     <h2 id="shots-h">What it looks like on a phone</h2>
     <p class="subhead">Captured from the running app at iPhone 14 viewport.</p>
-    <div class="shots-empty">Screenshots from the running app are coming soon.</div>
+    <div class="shots-grid"><figure class="shot-card"><img src="screenshots/01-split.png" alt="Bill $67.50 split between 2 people at 18% — each pays $39.83. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">01</span><span>Bill $67.50 split between 2 people at 18% — each pays $39.83.</span></figcaption></figure><figure class="shot-card"><img src="screenshots/02-custom.png" alt="Custom 22.5% tip on a larger bill split 6 ways. Custom field overrides the presets. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">02</span><span>Custom 22.5% tip on a larger bill split 6 ways. Custom field overrides the presets.</span></figcaption></figure></div>
   </section>
 
   <footer class="colophon">
